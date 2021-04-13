@@ -7,13 +7,17 @@ export const Home = () => {
         var c = 1
         var stemp
 
-        str = str.sort(function () { return Math.random() - 0.5 });
+        if (str.lenth != 0) {
+            str = str.sort(function () { return Math.random() - 0.5 });
 
-        str.forEach(element => {
-            stemp = c + ". " + element
-            temp.push(stemp)
-            c++
-        });
+            str.forEach(element => {
+                if (element.trim() != "") {
+                    stemp = c + ". " + element
+                    temp.push(stemp)
+                    c++
+                }
+            });
+        }
 
 
         setValues(temp)
@@ -24,7 +28,10 @@ export const Home = () => {
     return (
         <div className="Home">
             <h1>What to eat tonight?</h1>
-            <input type="text" name="info" onChange={e => Calculate(e.target.value)} />
+            <div className="form__group">
+                <input type="text" name="info" onChange={e => Calculate(e.target.value)} />
+                <label for="name">Ingresa la lista aqui</label>
+            </div>
             <ul>
                 {
                     values.map(e => {
