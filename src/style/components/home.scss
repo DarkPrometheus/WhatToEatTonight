@@ -1,0 +1,121 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.5rem;
+    background-color:#222222;
+  }
+
+#root{
+    padding-top: 3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.Home h1{
+    font-size: 4rem;
+    color: gray;
+}
+
+.Home input{
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid $gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color: $white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  
+    &::placeholder {
+      color: transparent;
+    }
+  
+    &:placeholder-shown ~ .form__label {
+      font-size: 1.3rem;
+      cursor: text;
+      top: 20px;
+    }
+
+    margin-bottom: 1rem;
+}
+
+.Home ul{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.Home ul li{
+    color: bisque;
+    padding: .2rem;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 360px) {
+    .Home{
+        width: 80%;
+    }
+    .Home h1{
+        font-size: 1.9rem;
+    }
+    .Home input{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 360px) {
+    .Home{
+        width: 80%;
+    }
+    .Home h1{
+        font-size: 1.9rem;
+    }
+    .Home input{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .Home{
+        width: 80%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .Home{
+        width: 80%;
+    }
+    .Home h1{
+        font-size: 5rem;
+    }
+    .Home input{
+        font-size: 2rem;
+    }
+    .Home ul li{
+        font-size: 3rem;
+    }
+}
