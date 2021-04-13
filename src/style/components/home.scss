@@ -61,18 +61,15 @@ body {
 
 label {
     position: absolute;
-    top: 1;
-    font-size: 1.3rem;
+    top: 0;
+    font-size: 1rem;
     transition: $transition;
     color: $gray;
 }
   
 input:focus {
     ~ label {
-        position: absolute;
-        top: 0;
       transition: $transition;
-      font-size: 1rem;
       color: $primary;
       font-weight:700;    
     }
